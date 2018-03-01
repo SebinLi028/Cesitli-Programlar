@@ -4,7 +4,7 @@ using System.Net;//Mail kütüphanesi
 using System.Net.Mail;//Mail kütüphanesi
 using System.Net.NetworkInformation;//İnternet bağlantı kütüphanesi
 
-public void MailGonder(string Ad, string Soyad)
+public void MailGonder(string Ad, string Soyad, string kimden, string kime)
 {
     DialogResult gonder = MessageBox.Show("Bilgileriniz Gönderilsinmi?", "Mail Bilgi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -15,17 +15,16 @@ public void MailGonder(string Ad, string Soyad)
             if (NetworkInterface.GetIsNetworkAvailable() == true) //internet bağlantısı varsa devam et
             {
                 try
-                {
-                    string MailAdresi = "Gönderenin mail adresi";
+                {                    
                     //Gmail için Smtp Ayarları
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                    smtp.Port = 587;
-                    smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential(MailAdresi, "Gönderenin şifresi");
+                    smtp.Port = 587; //Gmail smtp varsayılan port
+                    smtp.EnableSsl = true; //SSL aktif et
+                    smtp.Credentials = new NetworkCredential(kimden, "Gönderen şifresi");
                     
                     MailMessage eMail = new MailMessage();
-                    eMail.From = new MailAddress(MailAdresi);
-                    eMail.To.Add("Alıcının Mail Adresi");
+                    eMail.From = new MailAddress(kimden); //kimden
+                    eMail.To.Add(kime); //kime
                     eMail.Subject = "C# Mail Gönderme";
                     eMail.IsBodyHtml = true; //Html özelliklerini aktif et
                     eMail.Body = "<b><u>Adınız:</u></b> " + Ad.Trim() +
@@ -45,4 +44,4 @@ public void MailGonder(string Ad, string Soyad)
 }
 
 private void Button1_Click(object sender, EventArgs e)
-{ MailGonder("İbrahim", "YAVUZ"); }
+{ MailGonder("İbrahim", "YAVUZ", "Gönderen mail adresi", "Alıcı mail adresi"); }
