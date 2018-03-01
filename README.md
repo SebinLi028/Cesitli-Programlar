@@ -1,2 +1,2 @@
-# programming
-Programlama Dilleri İle Çeşitli Uygulamalarım
+# CesitliProgramlar
+Programlama Dilleri İle Geliştirmiş Olduğum Çeşitli Programlar
