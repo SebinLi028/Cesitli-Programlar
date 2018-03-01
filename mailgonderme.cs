@@ -16,16 +16,16 @@ public void MailGonder(string Ad, string Soyad)
             {
                 try
                 {
-                    string MailAdresi = "...@gmail.com";
+                    string MailAdresi = "Gönderenin mail adresi";
                     //Gmail için Smtp Ayarları
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com");
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential(MailAdresi, "şifre");//Gönderenin şifresi
+                    smtp.Credentials = new NetworkCredential(MailAdresi, "Gönderenin şifresi");
                     
                     MailMessage eMail = new MailMessage();
                     eMail.From = new MailAddress(MailAdresi);
-                    eMail.To.Add("...@gmail.com"); //Alıcının mail adresi
+                    eMail.To.Add("Alıcının Mail Adresi");
                     eMail.Subject = "C# Mail Gönderme";
                     eMail.IsBodyHtml = true; //Html özelliklerini aktif et
                     eMail.Body = "<b><u>Adınız:</u></b> " + Ad.Trim() +
