@@ -1,3 +1,4 @@
+// This program demonstrates the overuse of goto.
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
