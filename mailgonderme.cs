@@ -21,15 +21,16 @@ public void MailGonder(string Ad, string Soyad)
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com");
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential(MailAdresi, "şifre");//gönderen mail adresi ve şifresi
+                    smtp.Credentials = new NetworkCredential(MailAdresi, "şifre");//Gönderenin şifresi
                     
                     MailMessage eMail = new MailMessage();
                     eMail.From = new MailAddress(MailAdresi);
-                    eMail.To.Add("...@gmail.com"); //Gönderilecek mail adresi
-                    eMail.Subject = "KULLANICI BİLGİLERİNİZ";
+                    eMail.To.Add("...@gmail.com"); //Alıcının mail adresi
+                    eMail.Subject = "C# Mail Gönderme";
                     eMail.IsBodyHtml = true; //Html özelliklerini aktif et
                     eMail.Body = "<b><u>Adınız:</u></b> " + Ad.Trim() +
-                        "<br /><br /><b><u>Soyadınız:</u></b> " + Soyad.Trim();
+                        "<br /><br /><b><u>Soyadınız:</u></b> " + Soyad.Trim() +
+                        "<br /><br /><a href="https://sebinli028.wordpress.com">SebinLi028.WordPress.Com</a>"
                     smtp.SendAsync(eMail, (object)eMail); //Mail yığılmasını ve programda hata oluşmasını önle
                     MessageBox.Show("Mail Gönderildi.", "Mail", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
