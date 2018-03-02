@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(void)
-
 {
 	double yaricap, alan, cevre;
 	cout << "Yaricapi Giriniz: ";
