@@ -1,6 +1,6 @@
 #include<iostream>
-
 using namespace std;
+
 int main(void)
 {
 	char child[25]; // Holds child’s first name
