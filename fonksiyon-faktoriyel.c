@@ -4,10 +4,7 @@
 int fakt(int n)
 {
 	int i, f  = 1;
-	for (i = n; i >= 1; i--)
-	{
-		f *= i;
-	}
+	for (i = n; i >= 1; i--) f *= i;
 	return f;
 }
 
