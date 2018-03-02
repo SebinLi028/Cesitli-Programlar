@@ -30,7 +30,7 @@ void yol2()
 	}
 }
 
-int main()
+int main(void)
 {
 	yol1();
 	cout << endl;
