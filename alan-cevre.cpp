@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
 #define PI 3.14
 using namespace std;
 
