@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main(void) {
+int main(void) 
+{
 	int grade, makeup;
 	cout << "enter grade: ";
 	cin >> grade;
