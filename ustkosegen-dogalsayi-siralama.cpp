@@ -7,12 +7,12 @@ void yol1()
 	//variables for counter…
 	int i, j;
 	//outer loop, execute this first...
-	for (i = 1; i<11; i++)
+	for (i = 1; i < 11; i++)
 	{
 		cout << "\n" << i;
 		//then...execute inner loop with loop index j
 		//the initial value of j is i + 1
-		for (j = i + 1; j<11; j++)
+		for (j = i + 1; j < 11; j++)
 			//Display result…
 			cout << j;
 		//increment counter by 1 for inner loop…
@@ -23,10 +23,10 @@ void yol1()
 
 void yol2()
 {
-	for (int i = 0; i<11; i++)
+	for (int i = 0; i < 11; i++)
 	{
 		cout << "\n";
-		for (int j = i + 1; j<11; j++) cout << j;
+		for (int j = i + 1; j < 11; j++) cout << j;
 	}
 }
 
