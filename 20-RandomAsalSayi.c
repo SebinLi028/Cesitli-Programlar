@@ -18,7 +18,6 @@ int main(void)
 	srand(time(NULL)); //farklı rastgele sayı üret
 	int dizi[20], dizieleman = 0;
 	for (int i = 0; i < (sizeof(dizi) / sizeof(int)); i++) dizi[i] = 54 + rand() % 312; //54-312
-		
 	for (int i = 0; i < (sizeof(dizi) / sizeof(int)); i++)
 	{
 		if (asalkontrol(dizi[i]) == 2) { printf("%d\t", dizi[i]); dizieleman++; } //asalsa sayıyı ekrana yazdır
