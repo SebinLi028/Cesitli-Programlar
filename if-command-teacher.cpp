@@ -12,21 +12,9 @@ int main(void)
 		cin >> child;
 		cout << "What is the child's age? ";
 		cin >> age;
-		if (age <= 5)
-		{
-			cout << "\n" << child << " has Mrs. "
-				<< "Jones for a teacher\n";
-		}
-		if (age == 6)
-		{
-			cout << "\n" << child << " has Miss "
-				<< "Smith for a teacher\n";
-		}
-		if (age >= 7)
-		{
-			cout << "\n" << child << " has Mr. "
-				<< "Anderson for a teacher\n";
-		}
+		if (age <= 5) cout << "\n" << child << " has Mrs. " << "Jones for a teacher\n";
+		if (age == 6) cout << "\n" << child << " has Miss " << "Smith for a teacher\n";
+		if (age >= 7) cout << "\n" << child << " has Mr. " << "Anderson for a teacher\n";
 	} // Quits after 5 times
 	return 0;
 }
