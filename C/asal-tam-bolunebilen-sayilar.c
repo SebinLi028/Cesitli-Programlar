@@ -1,19 +1,24 @@
 #include<cstdio>
-#include<cmath>
 
 int main(void)
 {
-	double sayi = 600851475143;
-	for (double i = 2; i <= sayi; i++)
+	long long int sayi = 600851475143, i, j, eByk = 0;
+	printf("%lld sayisinin asal tam bolunenleri: ", sayi);
+	for (i = 2; i <= sayi; i++)
 	{
 		int asal = 0;
-		if (fmod(sayi, i) == 0)//double mod alma
+		if (sayi % i == 0)
 		{
-			for (double j = 1; j <= i; j++)
-				if (fmod(i, j) == 0) asal++;
-			if (asal == 2) printf("%.0lf\t", i);
+			for (j = 1; j <= i; j++) if (i % j == 0) asal++;//sayının asal sayı olup olmadığı kontrol et
+			sayi /= i;//işlem yoğunluğunu azaltmak için sayıyı tam bölündüğü sayıya böl
+			if (asal == 2)//asallıktan gelen kural(sayının 1 ve kendisine başka böleni olmayacak)
+			{
+				printf("%lld  ", i);//asal sayıları yazdır
+				if (i > eByk) eByk = i;//en büyük sayıyı bul
+			}
 		}
 	}
+	printf("\n\nEn Buyuk Asal Bolen: %lld", eByk);
 	getchar();
 	return 0;
 }
