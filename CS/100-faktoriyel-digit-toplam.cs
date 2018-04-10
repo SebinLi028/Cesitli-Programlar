@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;//BigInteger veri tipi için projeye Add Referance -> Numerics diye aratıp projenize ekleyin
 
-namespace CSharp_ConsoleApp
+namespace faktoriyel_digit_toplam
 {
     class Program
     {
